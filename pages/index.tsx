@@ -5,7 +5,7 @@ import { useQuery } from 'react-query';
 
 const Chart = dynamic(() => import('../components/Chart'), { ssr: false });
 
-interface UpbitResponseModel {
+export interface UpbitResponseModel {
   market: string;
   candle_date_time_utc: string;
   candle_date_time_kst: string;
@@ -25,7 +25,7 @@ const Index = () => {
   const { data } = useQuery(
     ['/candles/days?market=KRW-BTC'],
     async () =>
-      (await axios.get<UpbitResponseModel>('https://api.upbit.com/v1/candles/days?market=KRW-BTC&count=100')).data,
+      (await axios.get<UpbitResponseModel[]>('https://api.upbit.com/v1/candles/days?market=KRW-BTC&count=100')).data,
     {
       refetchOnMount: false,
       refetchOnWindowFocus: false,
@@ -34,7 +34,7 @@ const Index = () => {
 
   return (
     <Main>
-      <Chart />
+      <Chart data={data} />
     </Main>
   );
 };
