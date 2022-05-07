@@ -29,6 +29,7 @@ const Index = () => {
     {
       refetchOnMount: false,
       refetchOnWindowFocus: false,
+      onSuccess: (value) => value.sort().reverse(),
     },
   );
 
