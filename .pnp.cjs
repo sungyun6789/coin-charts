@@ -53,6 +53,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:12.3.4"],\
             ["next", "virtual:a0c0d0225aa023cbc7fb622a4ea418094ab80bda0f3fb2952f7dbd67ccd45fc0db825debf2a484ef5d7b1e162315811e6297f76e10086215b0407348f71d9313#npm:12.0.8"],\
             ["prettier", "npm:2.5.1"],\
+            ["prop-types", "npm:15.8.1"],\
             ["react", "npm:17.0.2"],\
             ["react-dom", "virtual:a0c0d0225aa023cbc7fb622a4ea418094ab80bda0f3fb2952f7dbd67ccd45fc0db825debf2a484ef5d7b1e162315811e6297f76e10086215b0407348f71d9313#npm:17.0.2"],\
             ["recharts", "virtual:a0c0d0225aa023cbc7fb622a4ea418094ab80bda0f3fb2952f7dbd67ccd45fc0db825debf2a484ef5d7b1e162315811e6297f76e10086215b0407348f71d9313#npm:2.1.9"],\
@@ -1449,6 +1450,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:12.3.4"],\
             ["next", "virtual:a0c0d0225aa023cbc7fb622a4ea418094ab80bda0f3fb2952f7dbd67ccd45fc0db825debf2a484ef5d7b1e162315811e6297f76e10086215b0407348f71d9313#npm:12.0.8"],\
             ["prettier", "npm:2.5.1"],\
+            ["prop-types", "npm:15.8.1"],\
             ["react", "npm:17.0.2"],\
             ["react-dom", "virtual:a0c0d0225aa023cbc7fb622a4ea418094ab80bda0f3fb2952f7dbd67ccd45fc0db825debf2a484ef5d7b1e162315811e6297f76e10086215b0407348f71d9313#npm:17.0.2"],\
             ["recharts", "virtual:a0c0d0225aa023cbc7fb622a4ea418094ab80bda0f3fb2952f7dbd67ccd45fc0db825debf2a484ef5d7b1e162315811e6297f76e10086215b0407348f71d9313#npm:2.1.9"],\
