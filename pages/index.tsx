@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
+import dynamic from 'next/dynamic';
 
-import Chart from '../components/Chart';
+const Chart = dynamic(() => import('../components/Chart'), { ssr: false });
 
 const Main = styled.main`
   width: 100vw;
