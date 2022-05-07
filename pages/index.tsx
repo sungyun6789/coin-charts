@@ -3,7 +3,7 @@ import axios from 'axios';
 import dynamic from 'next/dynamic';
 import { useQuery } from 'react-query';
 
-const Chart = dynamic(() => import('../components/Chart'), { ssr: false });
+const Chart = dynamic(() => import('../components/Chart/Chart'), { ssr: false });
 
 export interface UpbitResponseModel {
   market: string;

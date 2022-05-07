@@ -1,6 +1,6 @@
 import { Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
 
-import type { UpbitResponseModel } from '../pages';
+import type { UpbitResponseModel } from '../../pages';
 
 interface Props {
   data: UpbitResponseModel[] | undefined;
