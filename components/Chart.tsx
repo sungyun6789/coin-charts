@@ -8,7 +8,7 @@ const Chart = () => {
       <XAxis dataKey={undefined} />
       <YAxis />
       <Tooltip />
-      <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
+      <Line type="monotone" dataKey="pv" stroke="#8884d8" strokeWidth={2} activeDot={{ r: 6 }} />
     </LineChart>
   );
 };
