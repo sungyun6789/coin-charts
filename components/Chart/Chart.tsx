@@ -1,9 +1,18 @@
+import dayjs from 'dayjs';
 import { Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
 
 import { useBtcDataQuery } from './Chart.query';
 
 const Chart = () => {
-  const { data } = useBtcDataQuery();
+  const { data: btcData } = useBtcDataQuery();
+
+  const data = btcData
+    ?.map((value) => ({
+      ...value,
+      candle_date_time_utc: dayjs(value.candle_date_time_utc).format('MM-DD'),
+    }))
+    .sort()
+    .reverse();
 
   return (
     <LineChart width={1000} height={500} data={data}>

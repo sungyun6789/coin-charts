@@ -14,5 +14,4 @@ export const useBtcDataQuery = () =>
   useQuery(['/candles/days?market=KRW-BTC'], getBtcData, {
     refetchOnMount: false,
     refetchOnWindowFocus: false,
-    onSuccess: (value) => value.sort().reverse(),
   });
