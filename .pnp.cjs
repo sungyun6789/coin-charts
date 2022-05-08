@@ -38,6 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@next/eslint-plugin-next", "npm:12.1.0"],\
             ["@types/node", "npm:17.0.12"],\
             ["@types/react", "npm:17.0.38"],\
+            ["@types/react-datepicker", "npm:4.4.1"],\
             ["@types/react-dom", "npm:17.0.11"],\
             ["@typescript-eslint/eslint-plugin", "virtual:a0c0d0225aa023cbc7fb622a4ea418094ab80bda0f3fb2952f7dbd67ccd45fc0db825debf2a484ef5d7b1e162315811e6297f76e10086215b0407348f71d9313#npm:5.10.1"],\
             ["@typescript-eslint/parser", "virtual:a0c0d0225aa023cbc7fb622a4ea418094ab80bda0f3fb2952f7dbd67ccd45fc0db825debf2a484ef5d7b1e162315811e6297f76e10086215b0407348f71d9313#npm:5.12.1"],\
@@ -762,6 +763,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/prop-types", "npm:15.7.4"],\
             ["@types/scheduler", "npm:0.16.2"],\
             ["csstype", "npm:3.0.10"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/react-datepicker", [\
+        ["npm:4.4.1", {\
+          "packageLocation": "./.yarn/cache/@types-react-datepicker-npm-4.4.1-618b6a94ad-f63ba9288c.zip/node_modules/@types/react-datepicker/",\
+          "packageDependencies": [\
+            ["@types/react-datepicker", "npm:4.4.1"],\
+            ["@popperjs/core", "npm:2.11.5"],\
+            ["@types/react", "npm:17.0.38"],\
+            ["date-fns", "npm:2.28.0"],\
+            ["react-popper", "virtual:618b6a94ad894dd7cd32e187ee47b5799986ed66bd64b8a8216084acd9bc485ebeef9d22b32a449a004dbff82f3ac68620579b7cfc852517f774fd1480877102#npm:2.3.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1494,6 +1508,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@next/eslint-plugin-next", "npm:12.1.0"],\
             ["@types/node", "npm:17.0.12"],\
             ["@types/react", "npm:17.0.38"],\
+            ["@types/react-datepicker", "npm:4.4.1"],\
             ["@types/react-dom", "npm:17.0.11"],\
             ["@typescript-eslint/eslint-plugin", "virtual:a0c0d0225aa023cbc7fb622a4ea418094ab80bda0f3fb2952f7dbd67ccd45fc0db825debf2a484ef5d7b1e162315811e6297f76e10086215b0407348f71d9313#npm:5.10.1"],\
             ["@typescript-eslint/parser", "virtual:a0c0d0225aa023cbc7fb622a4ea418094ab80bda0f3fb2952f7dbd67ccd45fc0db825debf2a484ef5d7b1e162315811e6297f76e10086215b0407348f71d9313#npm:5.12.1"],\
@@ -4267,6 +4282,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-popper", "npm:2.3.0"]\
           ],\
           "linkType": "SOFT"\
+        }],\
+        ["virtual:618b6a94ad894dd7cd32e187ee47b5799986ed66bd64b8a8216084acd9bc485ebeef9d22b32a449a004dbff82f3ac68620579b7cfc852517f774fd1480877102#npm:2.3.0", {\
+          "packageLocation": "./.yarn/__virtual__/react-popper-virtual-4dfd815188/0/cache/react-popper-npm-2.3.0-1045578379-837111c987.zip/node_modules/react-popper/",\
+          "packageDependencies": [\
+            ["react-popper", "virtual:618b6a94ad894dd7cd32e187ee47b5799986ed66bd64b8a8216084acd9bc485ebeef9d22b32a449a004dbff82f3ac68620579b7cfc852517f774fd1480877102#npm:2.3.0"],\
+            ["@popperjs/core", "npm:2.11.5"],\
+            ["@types/popperjs__core", null],\
+            ["@types/react", "npm:17.0.38"],\
+            ["@types/react-dom", null],\
+            ["react", null],\
+            ["react-dom", null],\
+            ["react-fast-compare", "npm:3.2.0"],\
+            ["warning", "npm:4.0.3"]\
+          ],\
+          "packagePeers": [\
+            "@popperjs/core",\
+            "@types/popperjs__core",\
+            "@types/react-dom",\
+            "@types/react",\
+            "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
         }],\
         ["virtual:b90ff1e4e3df000a12b4b7a6b6c69fe1d131ff5146a17bacd51b7ece679f7acd38783f451c3c2a6074ec33fe7607e16cb3145e6583311440b3f2d1d353cbb8c7#npm:2.3.0", {\
           "packageLocation": "./.yarn/__virtual__/react-popper-virtual-3389469afd/0/cache/react-popper-npm-2.3.0-1045578379-837111c987.zip/node_modules/react-popper/",\
