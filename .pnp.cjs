@@ -42,6 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:a0c0d0225aa023cbc7fb622a4ea418094ab80bda0f3fb2952f7dbd67ccd45fc0db825debf2a484ef5d7b1e162315811e6297f76e10086215b0407348f71d9313#npm:5.10.1"],\
             ["@typescript-eslint/parser", "virtual:a0c0d0225aa023cbc7fb622a4ea418094ab80bda0f3fb2952f7dbd67ccd45fc0db825debf2a484ef5d7b1e162315811e6297f76e10086215b0407348f71d9313#npm:5.12.1"],\
             ["axios", "npm:0.27.2"],\
+            ["dayjs", "npm:1.11.2"],\
             ["eslint", "npm:8.7.0"],\
             ["eslint-config-next", "virtual:a0c0d0225aa023cbc7fb622a4ea418094ab80bda0f3fb2952f7dbd67ccd45fc0db825debf2a484ef5d7b1e162315811e6297f76e10086215b0407348f71d9313#npm:12.0.8"],\
             ["eslint-config-prettier", "virtual:a0c0d0225aa023cbc7fb622a4ea418094ab80bda0f3fb2952f7dbd67ccd45fc0db825debf2a484ef5d7b1e162315811e6297f76e10086215b0407348f71d9313#npm:8.3.0"],\
@@ -1487,6 +1488,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:a0c0d0225aa023cbc7fb622a4ea418094ab80bda0f3fb2952f7dbd67ccd45fc0db825debf2a484ef5d7b1e162315811e6297f76e10086215b0407348f71d9313#npm:5.10.1"],\
             ["@typescript-eslint/parser", "virtual:a0c0d0225aa023cbc7fb622a4ea418094ab80bda0f3fb2952f7dbd67ccd45fc0db825debf2a484ef5d7b1e162315811e6297f76e10086215b0407348f71d9313#npm:5.12.1"],\
             ["axios", "npm:0.27.2"],\
+            ["dayjs", "npm:1.11.2"],\
             ["eslint", "npm:8.7.0"],\
             ["eslint-config-next", "virtual:a0c0d0225aa023cbc7fb622a4ea418094ab80bda0f3fb2952f7dbd67ccd45fc0db825debf2a484ef5d7b1e162315811e6297f76e10086215b0407348f71d9313#npm:12.0.8"],\
             ["eslint-config-prettier", "virtual:a0c0d0225aa023cbc7fb622a4ea418094ab80bda0f3fb2952f7dbd67ccd45fc0db825debf2a484ef5d7b1e162315811e6297f76e10086215b0407348f71d9313#npm:8.3.0"],\
@@ -1754,6 +1756,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/damerau-levenshtein-npm-1.0.8-bda7311c69-d240b77575.zip/node_modules/damerau-levenshtein/",\
           "packageDependencies": [\
             ["damerau-levenshtein", "npm:1.0.8"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["dayjs", [\
+        ["npm:1.11.2", {\
+          "packageLocation": "./.yarn/cache/dayjs-npm-1.11.2-644b12fe04-78f8bd04a9.zip/node_modules/dayjs/",\
+          "packageDependencies": [\
+            ["dayjs", "npm:1.11.2"]\
           ],\
           "linkType": "HARD"\
         }]\
