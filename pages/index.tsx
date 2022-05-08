@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import dynamic from 'next/dynamic';
 
-const Chart = dynamic(() => import('../components/Chart/Chart'), { ssr: false });
+const Chart = dynamic(() => import('../components/Chart'), { ssr: false });
 
 const Index = () => {
   return (
