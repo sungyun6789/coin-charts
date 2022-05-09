@@ -10,7 +10,7 @@ const BChart = dynamic(() => import('../components/Chart/BChart'), { ssr: false 
 
 const Index = () => {
   const [chartType, setChartType] = useState<'날짜선택' | '현재가격'>('날짜선택');
-  const [count, setCount] = useState(10);
+  const [count, setCount] = useState(7);
   const { refetch } = useBtcDayDataQuery(count);
 
   return (
