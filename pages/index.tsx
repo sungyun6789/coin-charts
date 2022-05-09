@@ -37,4 +37,9 @@ const Main = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .recharts-cartesian-axis-ticks {
+    font-size: 11px;
+    width: 200px;
+  }
 `;
