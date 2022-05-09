@@ -21,4 +21,7 @@ const getBtcCurrentData = async () => {
   return data;
 };
 
-export const useBtcCurrentDataQuery = () => useQuery(['/trades/ticks?market=KRW-BTC'], getBtcCurrentData);
+export const useBtcCurrentDataQuery = () =>
+  useQuery(['/trades/ticks?market=KRW-BTC'], getBtcCurrentData, {
+    refetchInterval: 3000,
+  });
