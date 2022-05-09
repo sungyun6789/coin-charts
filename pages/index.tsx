@@ -3,14 +3,15 @@ import { useState } from 'react';
 import styled from '@emotion/styled';
 import dynamic from 'next/dynamic';
 
-import { useBtcDataQuery } from '../components/Chart/Chart.query';
+import { useBtcDayDataQuery } from '../components/Chart/Chart.query';
 
-const Chart = dynamic(() => import('../components/Chart'), { ssr: false });
+const LChart = dynamic(() => import('../components/Chart/LChart'), { ssr: false });
+const BChart = dynamic(() => import('../components/Chart/BChart'), { ssr: false });
 
 const Index = () => {
   const [isCurrentPrice, setIsCurrentPrice] = useState(false);
   const [count, setCount] = useState(10);
-  const { data, refetch } = useBtcDataQuery(count);
+  const { refetch } = useBtcDayDataQuery(count);
 
   return (
     <>
@@ -22,7 +23,7 @@ const Index = () => {
         현재가격보기
         <input type="checkbox" onChange={(e) => setIsCurrentPrice(e.target.checked)} />
       </div>
-      <Main>{isCurrentPrice ? <div /> : <Chart btcData={data} />}</Main>
+      <Main>{isCurrentPrice ? <BChart /> : <LChart count={count} />}</Main>
     </>
   );
 };

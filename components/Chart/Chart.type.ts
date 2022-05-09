@@ -1,4 +1,4 @@
-export interface UpbitResponseModel {
+export interface BtcDayDataModel {
   market: string;
   candle_date_time_utc: string;
   candle_date_time_kst: string;
@@ -12,4 +12,17 @@ export interface UpbitResponseModel {
   prev_closing_price: number;
   change_price: number;
   change_rate: number;
+}
+
+export interface BtcCurrentDataModel {
+  market: string;
+  trade_date_utc: string;
+  trade_time_utc: string;
+  timestamp: number;
+  trade_price: number;
+  trade_volume: number;
+  prev_closing_price: number;
+  change_price: number;
+  ask_bid: string;
+  sequential_id: number;
 }
