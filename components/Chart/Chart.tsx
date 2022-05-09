@@ -1,11 +1,13 @@
 import dayjs from 'dayjs';
 import { Line, LineChart, Tooltip, XAxis } from 'recharts';
 
-import { useBtcDataQuery } from './Chart.query';
+import type { UpbitResponseModel } from './Chart.type';
 
-const Chart = () => {
-  const { data: btcData } = useBtcDataQuery();
+interface Props {
+  btcData: UpbitResponseModel[] | undefined;
+}
 
+const Chart = ({ btcData }: Props) => {
   const data = btcData
     ?.map((value) => ({
       ...value,
