@@ -9,7 +9,7 @@ const BChart = () => {
   return (
     <ChartWrapper>
       <div>현재 가격: {data?.[0].trade_price.toLocaleString('ko-KR')}원</div>
-      <BarChart width={200} height={500} data={data}>
+      <BarChart width={250} height={500} data={data}>
         <Tooltip />
         <XAxis dataKey="market" />
         <YAxis dataKey="trade_price" />
@@ -25,6 +25,7 @@ const ChartWrapper = styled.section`
   text-align: center;
 
   div {
+    width: 250px;
     font-size: 20px;
     margin-bottom: 30px;
   }
