@@ -9,7 +9,7 @@ const LChart = dynamic(() => import('../components/Chart/LChart'), { ssr: false 
 const BChart = dynamic(() => import('../components/Chart/BChart'), { ssr: false });
 
 const Index = () => {
-  const [isCurrentPrice, setIsCurrentPrice] = useState(false);
+  const [chartType, setChartType] = useState<'날짜선택' | '현재가격'>('날짜선택');
   const [count, setCount] = useState(10);
   const { refetch } = useBtcDayDataQuery(count);
 
@@ -20,10 +20,12 @@ const Index = () => {
       일의 KRW-BTC 가격
       <button onClick={() => refetch()}>조회</button>
       <div>
-        현재가격보기
-        <input type="checkbox" onChange={(e) => setIsCurrentPrice(e.target.checked)} />
+        <select onChange={(e) => setChartType(e.target.value as '날짜선택' | '현재가격')}>
+          <option value="날짜선택">날짜 선택</option>
+          <option value="현재가격">현재 가격</option>
+        </select>
       </div>
-      <Main>{isCurrentPrice ? <BChart /> : <LChart count={count} />}</Main>
+      <Main>{chartType === '날짜선택' ? <LChart count={count} /> : <BChart />}</Main>
     </>
   );
 };
