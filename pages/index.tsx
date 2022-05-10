@@ -8,21 +8,23 @@ import { useBtcDayDataQuery } from '../components/Chart/Chart.query';
 const LChart = dynamic(() => import('../components/Chart/LChart'), { ssr: false });
 const BChart = dynamic(() => import('../components/Chart/BChart'), { ssr: false });
 
+type ChartType = '날짜선택' | '현재가격';
+
 const Index = () => {
-  const [chartType, setChartType] = useState<'날짜선택' | '현재가격'>('날짜선택');
+  const [selectType, setSelectType] = useState<ChartType>('날짜선택');
   const [count, setCount] = useState(7);
   const { refetch } = useBtcDayDataQuery(count);
 
   return (
     <Main>
       <Header>
-        <select onChange={(e) => setChartType(e.target.value as '날짜선택' | '현재가격')}>
+        <select onChange={(e) => setSelectType(e.target.value as ChartType)}>
           <option value="날짜선택">날짜 선택</option>
           <option value="현재가격">현재 가격</option>
         </select>
       </Header>
 
-      {chartType === '날짜선택' ? (
+      {selectType === '날짜선택' ? (
         <>
           <SelectDateWrapper>
             최근
