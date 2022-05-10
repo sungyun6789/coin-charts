@@ -21,15 +21,21 @@ const Index = () => {
           <option value="현재가격">현재 가격</option>
         </select>
       </Header>
-      {chartType === '날짜선택' && (
-        <SelectDateWrapper>
-          최근
-          <input value={count} onChange={(e) => setCount(+e.target.value)} />
-          일동안의 KRW-BTC 가격
-          <button onClick={() => refetch()}>조회</button>
-        </SelectDateWrapper>
-      )}
-      <Main>{chartType === '날짜선택' ? <LChart count={count} /> : <BChart />}</Main>
+      <Main>
+        {chartType === '날짜선택' ? (
+          <div>
+            <SelectDateWrapper>
+              최근
+              <input value={count} onChange={(e) => setCount(+e.target.value)} />
+              일동안의 KRW-BTC 가격
+              <button onClick={() => refetch()}>조회</button>
+            </SelectDateWrapper>
+            <LChart count={count} />
+          </div>
+        ) : (
+          <BChart />
+        )}
+      </Main>
     </>
   );
 };
