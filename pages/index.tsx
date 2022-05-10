@@ -14,29 +14,32 @@ const Index = () => {
   const { refetch } = useBtcDayDataQuery(count);
 
   return (
-    <>
+    <Main>
       <Header>
         <select onChange={(e) => setChartType(e.target.value as '날짜선택' | '현재가격')}>
           <option value="날짜선택">날짜 선택</option>
           <option value="현재가격">현재 가격</option>
         </select>
       </Header>
-      <Main>
-        {chartType === '날짜선택' ? (
-          <div>
-            <SelectDateWrapper>
-              최근
-              <input value={count} onChange={(e) => setCount(+e.target.value)} />
-              일동안의 KRW-BTC 가격
-              <button onClick={() => refetch()}>조회</button>
-            </SelectDateWrapper>
+
+      {chartType === '날짜선택' ? (
+        <>
+          <SelectDateWrapper>
+            최근
+            <input value={count} onChange={(e) => setCount(+e.target.value)} />
+            일동안의 KRW-BTC 가격
+            <button onClick={() => refetch()}>조회</button>
+          </SelectDateWrapper>
+          <ChartWrapper>
             <LChart count={count} />
-          </div>
-        ) : (
+          </ChartWrapper>
+        </>
+      ) : (
+        <ChartWrapper>
           <BChart />
-        )}
-      </Main>
-    </>
+        </ChartWrapper>
+      )}
+    </Main>
   );
 };
 
@@ -46,11 +49,7 @@ const Main = styled.main`
   width: 100vw;
   height: 100vh;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  .recharts-cartesian-axis-ticks {
+  .yAxis {
     font-size: 11px;
     width: 200px;
   }
@@ -60,7 +59,7 @@ const Header = styled.header`
   display: flex;
   justify-content: center;
   height: 50px;
-  margin: 20px;
+  margin-top: 20px;
 
   select {
     width: 200px;
@@ -71,10 +70,19 @@ const Header = styled.header`
   }
 `;
 
+const ChartWrapper = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+`;
+
 const SelectDateWrapper = styled.article`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 20px 0;
 
   input {
     width: 60px;
