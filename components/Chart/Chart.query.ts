@@ -16,11 +16,13 @@ export const useBtcDayDataQuery = (count: number) =>
     refetchOnWindowFocus: false,
   });
 
+/** @deprecated websocket 연결로 더 이상 사용하지 않음 */
 const getBtcCurrentData = async () => {
   const { data } = await axios.get<BtcCurrentDataModel[]>('https://api.upbit.com/v1/trades/ticks?market=KRW-BTC');
   return data;
 };
 
+/** @deprecated websocket 연결로 더 이상 사용하지 않음 */
 export const useBtcCurrentDataQuery = () =>
   useQuery(['/trades/ticks?market=KRW-BTC'], getBtcCurrentData, {
     refetchInterval: 3000,

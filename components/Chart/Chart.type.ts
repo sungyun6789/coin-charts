@@ -14,6 +14,7 @@ export interface BtcDayDataModel {
   change_rate: number;
 }
 
+/** @deprecated websocket 연결로 더 이상 사용하지 않음 */
 export interface BtcCurrentDataModel {
   market: string;
   trade_date_utc: string;
