@@ -1,12 +1,9 @@
 import { useEffect, useState } from 'react';
 
 import styled from '@emotion/styled';
-// import { Bar, BarChart, Tooltip, XAxis, YAxis } from 'recharts';
-
-// import { useBtcCurrentDataQuery } from './Chart.query';
+import { Bar, BarChart, Tooltip, XAxis, YAxis } from 'recharts';
 
 const BChart = () => {
-  // const { data } = useBtcCurrentDataQuery();
   const [socketData, setSocketData] = useState<any>();
 
   useEffect(() => {
@@ -24,12 +21,12 @@ const BChart = () => {
   return (
     <ChartWrapper>
       <div>현재 가격: {socketData?.trade_price.toLocaleString('ko-KR')}원</div>
-      {/* <BarChart width={250} height={500} data={socketData}>
+      <BarChart width={250} height={500} data={[socketData]}>
         <Tooltip />
-        <XAxis dataKey="market" />
+        <XAxis dataKey="code" />
         <YAxis dataKey="trade_price" />
         <Bar dataKey="trade_price" fill="#8884d8" />
-      </BarChart> */}
+      </BarChart>
     </ChartWrapper>
   );
 };
