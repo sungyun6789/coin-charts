@@ -3,8 +3,14 @@ import { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import { Bar, BarChart, Tooltip, XAxis, YAxis } from 'recharts';
 
+interface SocketDataModel {
+  // ... 사용되지 않는 데이터는 추가하지 않음
+  code: string;
+  trade_price: number;
+}
+
 const BChart = () => {
-  const [socketData, setSocketData] = useState<any>();
+  const [socketData, setSocketData] = useState<SocketDataModel>();
 
   useEffect(() => {
     const socket = new WebSocket('wss://api.upbit.com/websocket/v1');
