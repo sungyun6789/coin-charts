@@ -1,6 +1,6 @@
-## 업비트 Open API와 차트 라이브러리 사용해 보고 싶어서 만든 프로젝트
+# Coin Charts
 
-#### 사용된 패키지
+### 업비트 Open API와 차트 라이브러리 사용해 보고 싶어서 만든 프로젝트
 
 ```json
   "dependencies": {
